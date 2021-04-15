@@ -2,9 +2,9 @@
 	<view class="header" :style='"height:"+headHeight+"px"'>
 		<view class='top'>
 			<view class="icons">
-				<text class="iconfont">&#xe61c;</text>
+				<text class="iconfont icon-geren"></text>
 			</view>
-			<view class="search"><text class="iconfontTwo">&#xe62a;</text>点击搜索</view>
+			<view class="search"><text class="iconfontTwo icon-search"></text>点击搜索</view>
 			<view class="zhanwei"></view>
 		</view>
 
@@ -22,18 +22,6 @@
 </script>
 
 <style scoped="scss">
-	@font-face {
-		font-family: 'iconfont';
-		src: url('https://at.alicdn.com/t/font_2486844_kci3mj2ymoa.ttf') format('truetype');
-	}
-
-	.iconfont {
-		font-family: "iconfont" !important;
-		font-size: 32px;
-		font-style: normal;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
 	.iconfontTwo{
 		font-family: "iconfont" !important;
 		font-size: 16px;
@@ -58,7 +46,7 @@
 	}
 
 	.icons {
-		flex: 1;
+		flex: 1.5;
 		height: 100%;
 		font-size: 16px;
 		color: #FFFFFF;
@@ -68,7 +56,7 @@
 	}
 
 	.zhanwei {
-		flex: 1;
+		flex: 3;
 		height: 100%;
 		display: flex;
 		align-items: center;
@@ -78,7 +66,7 @@
 		background: #F0F0F0;
 		height: 32px;
 		line-height:32px;	
-		flex: 2;
+		flex: 5;
 		position:relative;
 		border-radius: 16px;
 	}

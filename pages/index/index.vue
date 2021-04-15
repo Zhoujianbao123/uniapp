@@ -1,16 +1,24 @@
 <template>
-	<view class="container" :style='phoneHeight'>
-
-		<Header :headHeight="headHeight"></Header>
-
+	<view class="container" :style='phoneHeight'>	
+		<view>
+			<Header :headHeight="headHeight"></Header>
+		</view>
+		<view class="content"></view>
+		<view class="tabbar">
+			<Footer :current="currentTabIndex" @click="tabClick"></Footer>
+		</view>	
+		
 	</view>
 </template>
 
 <script>
 	import Header from "@/componients/Header/Header"
+	import Footer from "@/componients/Footer/Footer"
 	export default {
 		data() {
 			return {
+				//当前tabbar
+				currentTabIndex:1,
 				phoneHeight:'',
 				phoneHeightTwo:null,
 				menuButtonInfo:'',
@@ -19,7 +27,8 @@
 			}
 		},
 		components: {
-			Header
+			Header,
+			Footer
 		},
 		onReady(){
 			this.getPhoneHeight();
@@ -28,6 +37,11 @@
 			// console.log(this.phoneHeight)
 		},
 		methods: {
+			//点击当前tabbar索引
+			tabClick(index){
+				console.log("当前索引"+index)
+				this.currentTabIndex=index
+			},
 			//获取手机状态栏的宽度
 			getPhoneHeight(){
 				let that=this
@@ -56,7 +70,11 @@
 </script>
 
 <style>
+	
 	.container {
-		/* width:100%; */
+		width:100%;
+		height:100%;
+		overflow: hidden;
 	}
+	
 </style>
